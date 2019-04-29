@@ -1,5 +1,5 @@
 spring:
   data:
     elasticsearch:
-      #cluster-name: #默认为elasticsearch
+      cluster-name: bofei-es #默认为elasticsearch
       cluster-nodes: 192.168.6.132:9300
