@@ -12,6 +12,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 @SpringBootApplication
 public class Application {
+	
+	public void test3() {
+		System.out.println("test3");
+	}
 	public void test1() {
 		System.out.println("test1");
 	}
