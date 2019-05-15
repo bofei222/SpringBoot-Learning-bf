@@ -12,7 +12,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 @SpringBootApplication
 public class Application {
-
+	public void test1() {
+		System.out.println("test1");
+	}
 	public static void main(String[] args) {
 
 		SpringApplication.run(Application.class, args);
