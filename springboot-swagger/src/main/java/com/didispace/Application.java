@@ -29,4 +29,8 @@ public class Application {
 		System.out.println("test2");
 	}
 
+	public void test4() {
+		System.out.println("test4");
+	}
+
 }
