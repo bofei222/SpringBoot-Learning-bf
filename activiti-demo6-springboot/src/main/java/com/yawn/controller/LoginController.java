@@ -17,6 +17,18 @@ public class LoginController {
     @Resource
     private UserService userService;
 
+
+
+    @GetMapping("/a")
+    public String a() {
+        return "login";
+    }
+
+    @GetMapping("/b")
+    public String b() {
+        return "user";
+    }
+
     @PostMapping("/login")
     @ResponseBody
     public boolean login(HttpSession session, @RequestBody User user) {

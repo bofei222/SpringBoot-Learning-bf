@@ -13,11 +13,11 @@
       <outgoing>flow3</outgoing>
       <outgoing>flow5</outgoing>
     </exclusiveGateway>
-    <userTask id="usertask2" activiti:candidateGroups="manageGroup" activiti:exclusive="true" name="总监审批">
+    <userTask id="usertask2" activiti:candidateGroups="manageGroup" activiti:exclusive="true" name="经理审批">
       <incoming>flow3</incoming>
       <outgoing>flow4</outgoing>
     </userTask>
-    <userTask id="usertask3" activiti:candidateGroups="dirGroup" activiti:exclusive="true" name="经理审批">
+    <userTask id="usertask3" activiti:candidateGroups="dirGroup" activiti:exclusive="true" name="总监审批">
       <incoming>flow5</incoming>
       <outgoing>flow6</outgoing>
     </userTask>
