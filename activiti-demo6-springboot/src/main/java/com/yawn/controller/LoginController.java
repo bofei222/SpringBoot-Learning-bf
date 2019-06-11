@@ -24,10 +24,6 @@ public class LoginController {
         return "login";
     }
 
-    @GetMapping("/b")
-    public String b() {
-        return "user";
-    }
 
     @PostMapping("/login")
     @ResponseBody
