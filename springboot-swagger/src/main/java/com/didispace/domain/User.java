@@ -1,6 +1,8 @@
 package com.didispace.domain;
 
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
 /**
  *
@@ -9,10 +11,13 @@ package com.didispace.domain;
  * @blog http://blog.didispace.com
  *
  */
+@ApiModel
 public class User {
-
+    @ApiModelProperty("id")
     private Long id;
+    @ApiModelProperty("名字")
     private String name;
+    @ApiModelProperty("性别")
     private Integer age;
 
     public Long getId() {
