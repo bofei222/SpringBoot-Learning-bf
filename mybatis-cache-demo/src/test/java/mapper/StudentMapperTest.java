@@ -53,13 +53,13 @@ public class StudentMapperTest {
      */
     @Test
     public void testLocalCacheClear() throws Exception {
-        SqlSession sqlSession = factory.openSession(true); // 自动提交事务
+        SqlSession sqlSession = factory.openSession(); // 自动提交事务
         StudentMapper studentMapper = sqlSession.getMapper(StudentMapper.class);
 
         System.out.println(studentMapper.getStudentById(1));
         System.out.println("增加了" + studentMapper.addStudent(buildStudent()) + "个学生");
         System.out.println(studentMapper.getStudentById(1));
-
+//        sqlSession.commit();
         sqlSession.close();
     }
 

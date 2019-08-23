@@ -2,6 +2,7 @@ package com.bf.springbootmybatis.controller;
 
 import com.bf.springbootmybatis.entity.User;
 import com.bf.springbootmybatis.mapper.UserMapper;
+import com.bf.springbootmybatis.service.UserService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,6 +21,9 @@ import java.util.List;
 public class UserController {
     @Resource
     private UserMapper userMapper;
+
+    @Resource
+    private UserService userService;
 
     @GetMapping("/")
     public List<User> getUserList() {
@@ -46,11 +50,8 @@ public class UserController {
     }
 
     @GetMapping("/{id}")
-    public User getUserList(@PathVariable("id") Integer id) {
-        User user = userMapper.get(id);
+    public String getUserList(@PathVariable("id") Integer id) {
 
-        System.out.println("user" + user);
-        user.getId();
-        return user;
+        return userService.getData(id);
     }
 }
