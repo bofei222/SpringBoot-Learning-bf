@@ -9,7 +9,8 @@ import java.util.Map;
  * Created by liuruijie on 2016/9/28.
  * 前端页面控制
  */
-public class ToWeb {
+public class
+ToWeb {
     private String status; //状态码
     private String msg; //提示信息
     private String redirectUrl; //重定向的url

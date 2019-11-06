@@ -3,10 +3,7 @@ package com.bf.springbootmybatis.controller;
 import com.bf.springbootmybatis.entity.User;
 import com.bf.springbootmybatis.mapper.UserMapper;
 import com.bf.springbootmybatis.service.UserService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -53,5 +50,12 @@ public class UserController {
     public String getUserList(@PathVariable("id") Integer id) {
 
         return userService.getData(id);
+    }
+
+
+    @PutMapping("/testTran")
+    public String testTran() {
+        userService.testTran();
+        return "?";
     }
 }

@@ -1,10 +1,7 @@
 package com.bf.springbootmybatis.mapper;
 
 import com.bf.springbootmybatis.entity.User;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.List;
@@ -39,9 +36,11 @@ public interface UserMapper {
     @Select("SELECT * FROM USER WHERE NAME = #{name}")
     User findByName(@Param("name") String name);
 
-    @Insert("INSERT INTO USER(NAME, AGE) VALUES(#{name}, #{age})")
-    int insert(@Param("name") String name, @Param("age") Integer age);
+    @Insert("INSERT INTO USER(user_name, sex) VALUES(#{name}, #{sex})")
+    int insert(@Param("name") String name, @Param("sex") Integer sex);
 
+    @Update("UPDATE user SET user_name = #{username} WHERE id = #{id}")
+    int updateUser(User user);
 
 
 }

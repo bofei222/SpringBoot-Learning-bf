@@ -36,4 +36,19 @@ public class UserService {
         return user.toString() + category.toString();
     }
 
+
+    public String testTran() {
+
+
+        User user = new User();
+        user.setId(2);
+        user.setUser_name("ccc");
+
+
+        userMapper.insert("aaa", 1);
+        userMapper.updateUser(user);
+
+        return "2";
+    }
+
 }
