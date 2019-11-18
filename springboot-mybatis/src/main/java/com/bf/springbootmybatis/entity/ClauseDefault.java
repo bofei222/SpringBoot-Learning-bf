@@ -15,5 +15,5 @@ public class ClauseDefault {
     private Integer id;
 
     @Column(name = "otherwise_agree")
-    private String spOtherwiseAgree;
+    private String otherwiseAgree;
 }

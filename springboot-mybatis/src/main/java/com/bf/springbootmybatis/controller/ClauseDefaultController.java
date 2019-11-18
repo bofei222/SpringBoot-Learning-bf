@@ -29,6 +29,9 @@ public class ClauseDefaultController {
 
         List<ClauseDefault> list = clauseDefaultMapper.getList();
         System.out.println(list);
+
+        List<ClauseDefault> all = clauseDefaultMapper.getAll();
+        System.out.println(all);
         return "0216";
     }
 }

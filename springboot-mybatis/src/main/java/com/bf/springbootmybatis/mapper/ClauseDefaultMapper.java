@@ -8,6 +8,8 @@ import java.util.List;
 
 //@org.apache.ibatis.annotations.Mapper
 public interface ClauseDefaultMapper extends Mapper<ClauseDefault> {
-    @Select("select * from clause_default")
+
     List<ClauseDefault> getList();
+
+    List<ClauseDefault> getAll();
 }

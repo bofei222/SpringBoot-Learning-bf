@@ -7,8 +7,10 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
 
 mybatis:
-  configuration:
-    map-underscore-to-camel-case: true
+#  configuration:
+#    map-underscore-to-camel-case: true
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.bf.springbootmybatis.entity
 logging:
   level:
     com.bf.springbootmybatis.mapper: debug

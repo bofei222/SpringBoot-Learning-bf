@@ -6,6 +6,13 @@
       WARNING - @mbg.generated
     -->
     <id column="id" jdbcType="INTEGER" property="id" />
-    <result column="otherwise_agree" jdbcType="VARCHAR" property="spOtherwiseAgree" />
+<!--    <result column="otherwise_agree" jdbcType="VARCHAR" property="spOtherwiseAgree" />-->
   </resultMap>
+
+  <select id="getList" resultType="ClauseDefault">
+    select * from clause_default
+  </select>
+  <select id="getAll" resultMap="BaseResultMap">
+    select * from clause_default
+  </select>
 </mapper>
