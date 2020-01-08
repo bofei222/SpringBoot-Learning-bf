@@ -2,9 +2,9 @@
 spring:
   datasource:
     username: root
-    password: root
-    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=UTF8&useSSL=true
-    driver-class-name: com.mysql.jdbc.Driver
+    password: Pa55Word
+    url: jdbc:hive2://47.94.23.139:22050/kudu_hnit_dev;auth=noSasl
+    driver-class-name: org.apache.hive.jdbc.HiveDriver
 
 mybatis:
 #  configuration:

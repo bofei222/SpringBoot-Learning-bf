@@ -9,7 +9,7 @@ import lombok.Data;
  **/
 @Data
 public class User {
-    Integer id;
-    String user_name;
-    Integer sex;
+    private Long id;
+    private String name;
+    private Integer age;
 }
