@@ -6,12 +6,14 @@
 
   <groupId>com.bf</groupId>
   <artifactId>SpringBoot-Learning-bf</artifactId>
-  <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
 
   <name>SpringBoot-Learning-bf</name>
 
   <modules>
     <module>springboot-swagger</module>
+      <module>itext-study</module>
   </modules>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
