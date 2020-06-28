@@ -1,14 +1,14 @@
 package com.bf.pdf;
 
-import com.itextpdf.text.Chunk;
-import com.itextpdf.text.Document;
-import com.itextpdf.text.PageSize;
-import com.itextpdf.text.Paragraph;
-import com.itextpdf.text.pdf.PdfWriter;
+    import com.itextpdf.text.*;
+    import com.itextpdf.text.pdf.BaseFont;
+    import com.itextpdf.text.pdf.PdfWriter;
 
 import java.io.FileOutputStream;
-
+// 空行Demo
 public class BlackDemo {
+    /** Path to the vietnamese font. */
+    public static final String FONT = "SIMSUN.ttf";
     public static void main(String args[]) {
         try {
             // create a new document
@@ -16,8 +16,9 @@ public class BlackDemo {
             PdfWriter.getInstance(document, new FileOutputStream("D:/iTextDemo/BlankDemo.pdf"));
 
             document.open();
-
-            document.add(new Paragraph("Hello, World!"));
+            BaseFont font = BaseFont.createFont(FONT, BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+            Font normalFont = new Font(font, 12);
+            document.add(new Paragraph("你好, World!", normalFont));
             document.add(new Paragraph("Hello, World!"));
 
             // add a couple of blank lines
